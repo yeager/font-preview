@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "font-preview"
-version = "0.2.0"
+version = "0.2.1"
 description = "A better font viewer for Linux — preview, compare, and analyze Unicode coverage"
 readme = "README.md"
 license = "GPL-3.0-or-later"

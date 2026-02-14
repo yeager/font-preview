@@ -2,7 +2,7 @@
 Name=Font Preview
 Comment=Preview and compare fonts
 Exec=font-preview
-Icon=font-x-generic
+Icon=font-preview
 Terminal=false
 Type=Application
 Categories=Utility;GTK;

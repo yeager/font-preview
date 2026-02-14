@@ -31,6 +31,9 @@ class FontPreviewApplication(Adw.Application):
             application_id="se.danielnylander.FontPreview",
             flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
         )
+        about_action = Gio.SimpleAction.new("about", None)
+        about_action.connect("activate", self._on_about)
+        self.add_action(about_action)
 
     def do_activate(self):
         from .window import FontPreviewWindow
@@ -39,6 +42,23 @@ class FontPreviewApplication(Adw.Application):
         if not win:
             win = FontPreviewWindow(application=self)
         win.present()
+
+    def _on_about(self, action, param):
+        about = Adw.AboutWindow(
+            transient_for=self.props.active_window,
+            application_name=_("Font Preview"),
+            application_icon="font-preview",
+            version="0.1.0",
+            developer_name="Daniel Nylander",
+            developers=["Daniel Nylander <daniel@danielnylander.se>"],
+            copyright="© 2025 Daniel Nylander",
+            license_type=Gtk.License.GPL_3_0,
+            website="https://github.com/yeager/font-preview",
+            issue_url="https://github.com/yeager/font-preview/issues",
+            comments=_("A localization tool by Daniel Nylander"),
+            translator_credits=_("Translate this app: https://app.transifex.com/linguaedit/font-preview/"),
+        )
+        about.present()
 
 
 def main():

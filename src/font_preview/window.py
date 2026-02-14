@@ -122,6 +122,12 @@ class FontPreviewWindow(Adw.ApplicationWindow):
         header.pack_start(self._compare_btn)
 
         # Favorite button
+        # Menu button
+        menu = Gio.Menu.new()
+        menu.append(_("About Font Preview"), "app.about")
+        menu_btn = Gtk.MenuButton(icon_name="open-menu-symbolic", menu_model=menu)
+        header.pack_end(menu_btn)
+
         self._fav_btn = Gtk.Button(icon_name="starred-symbolic")
         self._fav_btn.set_tooltip_text(_("Toggle favorite"))
         self._fav_btn.connect("clicked", self._on_toggle_favorite)

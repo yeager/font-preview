@@ -124,3 +124,11 @@ msgstr ""
 #: src/font_preview/window.py:493
 msgid "Clear comparison"
 msgstr ""
+
+#: desktop file
+msgid "Preview and compare fonts"
+msgstr ""
+
+#: desktop file
+msgid "font;preview;compare;unicode;"
+msgstr ""

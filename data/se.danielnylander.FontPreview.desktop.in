@@ -1,0 +1,10 @@
+[Desktop Entry]
+_Name=Font Preview
+_Comment=Preview and compare fonts
+Exec=font-preview
+Icon=font-preview
+Terminal=false
+Type=Application
+Categories=Utility;GTK;
+_Keywords=font;preview;compare;unicode;
+StartupNotify=true

@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Daniel Nylander
+# This file is distributed under the same license as the font-preview package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: font-preview 0.1.0\n"
+"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
+"POT-Creation-Date: 2026-02-14 10:08+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/font_preview/window.py:55 src/font_preview/window.py:116
+msgid "Font Preview"
+msgstr ""
+
+#: src/font_preview/window.py:62
+msgid "The quick brown fox jumps over the lazy dog. 0123456789"
+msgstr ""
+
+#: src/font_preview/window.py:78
+msgid "Fonts"
+msgstr ""
+
+#: src/font_preview/window.py:83
+msgid "Search fonts…"
+msgstr ""
+
+#: src/font_preview/window.py:92
+msgid "All Fonts"
+msgstr ""
+
+#: src/font_preview/window.py:92
+msgid "Favorites"
+msgstr ""
+
+#: src/font_preview/window.py:120 src/font_preview/window.py:202
+msgid "Compare"
+msgstr ""
+
+#: src/font_preview/window.py:126
+msgid "Toggle favorite"
+msgstr ""
+
+#: src/font_preview/window.py:137
+msgid "Preview text:"
+msgstr ""
+
+#: src/font_preview/window.py:162
+msgid "Preview"
+msgstr ""
+
+#: src/font_preview/window.py:172
+msgid "Unicode Coverage"
+msgstr ""
+
+#: src/font_preview/window.py:182 src/font_preview/window.py:400
+#: src/font_preview/window.py:410
+msgid "Language Coverage"
+msgstr ""
+
+#: src/font_preview/window.py:192
+msgid "Metadata"
+msgstr ""
+
+#: src/font_preview/window.py:349 src/font_preview/window.py:360
+msgid "Unicode Block Coverage"
+msgstr ""
+
+#: src/font_preview/window.py:365
+#, python-format
+msgid "Total glyphs: %d"
+msgstr ""
+
+#: src/font_preview/window.py:438
+#, python-format
+msgid "Missing: %s"
+msgstr ""
+
+#: src/font_preview/window.py:452
+msgid "Font Metadata"
+msgstr ""
+
+#: src/font_preview/window.py:457
+msgid "Family"
+msgstr ""
+
+#: src/font_preview/window.py:458
+msgid "Style"
+msgstr ""
+
+#: src/font_preview/window.py:459
+msgid "Weight"
+msgstr ""
+
+#: src/font_preview/window.py:460
+msgid "Slant"
+msgstr ""
+
+#: src/font_preview/window.py:461
+msgid "Width"
+msgstr ""
+
+#: src/font_preview/window.py:462
+msgid "File"
+msgstr ""
+
+#: src/font_preview/window.py:481
+msgid "Select 2–4 fonts to compare"
+msgstr ""
+
+#: src/font_preview/window.py:486
+#, python-format
+msgid "Comparing %d fonts (click more to add, max 4)"
+msgstr ""
+
+#: src/font_preview/window.py:493
+msgid "Clear comparison"
+msgstr ""

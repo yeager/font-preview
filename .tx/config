@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[o:yeager:p:font-preview:r:font-preview-pot]
+file_filter = po/<lang>.po
+source_file = po/font-preview.pot
+source_lang = en
+type = PO

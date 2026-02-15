@@ -37,6 +37,32 @@ class FontPreviewApplication(Adw.Application):
         about_action.connect("activate", self._on_about)
         self.add_action(about_action)
 
+    def do_startup(self):
+        Adw.Application.do_startup(self)
+        self.set_accels_for_action("app.quit", ["<Control>q"])
+        self.set_accels_for_action("app.refresh", ["F5"])
+        self.set_accels_for_action("app.shortcuts", ["<Control>slash"])
+        for n, cb in [("quit", lambda *_: self.quit()),
+                      ("refresh", lambda *_: self._do_refresh()),
+                      ("shortcuts", self._show_shortcuts_window)]:
+            a = Gio.SimpleAction.new(n, None); a.connect("activate", cb); self.add_action(a)
+
+    def _do_refresh(self):
+        w = self.get_active_window()
+        if w and hasattr(w, '_load_data'): w._load_data(force=True)
+        elif w and hasattr(w, '_on_refresh'): w._on_refresh(None)
+
+    def _show_shortcuts_window(self, *_args):
+        win = Gtk.ShortcutsWindow(transient_for=self.get_active_window(), modal=True)
+        section = Gtk.ShortcutsSection(visible=True, max_height=10)
+        group = Gtk.ShortcutsGroup(visible=True, title="General")
+        for accel, title in [("<Control>q", "Quit"), ("F5", "Refresh"), ("<Control>slash", "Keyboard shortcuts")]:
+            s = Gtk.ShortcutsShortcut(visible=True, accelerator=accel, title=title)
+            group.append(s)
+        section.append(group)
+        win.add_child(section)
+        win.present()
+
     def do_activate(self):
         from .window import FontPreviewWindow
 

@@ -6,3 +6,9 @@ file_filter = po/<lang>.po
 source_file = po/font-preview.pot
 source_lang = en
 type = PO
+
+[o:danielnylander:p:font-preview:r:font-preview-man]
+file_filter  = po/man/<lang>.po
+source_file  = po/man/font-preview.1.pot
+source_lang  = en
+type         = PO

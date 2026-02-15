@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: font-preview 0.1.0\n"
+"Project-Id-Version: font-preview\n"
 "Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-02-14 10:08+0100\n"
+"POT-Creation-Date: 2026-02-15 09:49+0100\n"
 "PO-Revision-Date: 2026-02-14 09:50+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304763/sv/)\n"
@@ -22,6 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/font_preview/window.py:55 src/font_preview/window.py:116
+#: src/font_preview/main.py:51
 msgid "Font Preview"
 msgstr "Förhandsvisa typsnitt"
 
@@ -35,7 +36,7 @@ msgstr "Typsnitt"
 
 #: src/font_preview/window.py:83
 msgid "Search fonts…"
-msgstr "Sök efter typsnitt..."
+msgstr "Sök efter typsnitt…"
 
 #: src/font_preview/window.py:92
 msgid "All Fonts"
@@ -45,94 +46,100 @@ msgstr "Alla typsnitt"
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: src/font_preview/window.py:120 src/font_preview/window.py:202
+#: src/font_preview/window.py:120 src/font_preview/window.py:208
 msgid "Compare"
 msgstr "Jämför"
 
-#: src/font_preview/window.py:126
+#: src/font_preview/window.py:127
+msgid "About Font Preview"
+msgstr "Om Förhandsvisa typsnitt"
+
+#: src/font_preview/window.py:132
 msgid "Toggle favorite"
 msgstr "Växla favorit"
 
-#: src/font_preview/window.py:137
+#: src/font_preview/window.py:143
 msgid "Preview text:"
 msgstr "Förhandsvisningstext:"
 
-#: src/font_preview/window.py:162
+#: src/font_preview/window.py:168
 msgid "Preview"
 msgstr "Förhandsvisa"
 
-#: src/font_preview/window.py:172
+#: src/font_preview/window.py:178
 msgid "Unicode Coverage"
 msgstr "Unicode-täckning"
 
-#: src/font_preview/window.py:182 src/font_preview/window.py:400
-#: src/font_preview/window.py:410
+#: src/font_preview/window.py:188 src/font_preview/window.py:406
+#: src/font_preview/window.py:416
 msgid "Language Coverage"
 msgstr "Språktäckning"
 
-#: src/font_preview/window.py:192
+#: src/font_preview/window.py:198
 msgid "Metadata"
 msgstr "Metadata"
 
-#: src/font_preview/window.py:349 src/font_preview/window.py:360
+#: src/font_preview/window.py:355 src/font_preview/window.py:366
 msgid "Unicode Block Coverage"
 msgstr "Täckning för Unicode-block"
 
-#: src/font_preview/window.py:365
+#: src/font_preview/window.py:371
 #, python-format
 msgid "Total glyphs: %d"
 msgstr "Totalt antal glyfer: %d"
 
-#: src/font_preview/window.py:438
+#: src/font_preview/window.py:444
 #, python-format
 msgid "Missing: %s"
 msgstr "Saknar: %s"
 
-#: src/font_preview/window.py:452
+#: src/font_preview/window.py:458
 msgid "Font Metadata"
 msgstr "Metadata för typsnitt"
 
-#: src/font_preview/window.py:457
+#: src/font_preview/window.py:463
 msgid "Family"
 msgstr "Familj"
 
-#: src/font_preview/window.py:458
+#: src/font_preview/window.py:464
 msgid "Style"
 msgstr "Stil"
 
-#: src/font_preview/window.py:459
+#: src/font_preview/window.py:465
 msgid "Weight"
 msgstr "Vikt"
 
-#: src/font_preview/window.py:460
+#: src/font_preview/window.py:466
 msgid "Slant"
 msgstr "Lutning"
 
-#: src/font_preview/window.py:461
+#: src/font_preview/window.py:467
 msgid "Width"
 msgstr "Bredd"
 
-#: src/font_preview/window.py:462
+#: src/font_preview/window.py:468
 msgid "File"
 msgstr "Fil"
 
-#: src/font_preview/window.py:481
+#: src/font_preview/window.py:487
 msgid "Select 2–4 fonts to compare"
 msgstr "Välj 2-4 typsnitt att jämföra"
 
-#: src/font_preview/window.py:486
+#: src/font_preview/window.py:492
 #, python-format
 msgid "Comparing %d fonts (click more to add, max 4)"
 msgstr "Jämför %d typsnitt (klicka mer för att lägga till, max 4)"
 
-#: src/font_preview/window.py:493
+#: src/font_preview/window.py:499
 msgid "Clear comparison"
 msgstr "Töm jämförelse"
 
-#: desktop file
-msgid "Preview and compare fonts"
-msgstr "Förhandsvisa och jämför typsnitt"
+#: src/font_preview/main.py:60
+msgid "A localization tool by Daniel Nylander"
+msgstr "Ett lokalanpassningsverktyg av Daniel Nylander"
 
-#: desktop file
-msgid "font;preview;compare;unicode;"
-msgstr "typsnitt;förhandsvisa;jämför;unicode;"
+#: src/font_preview/main.py:61
+msgid ""
+"Translate this app: https://app.transifex.com/danielnylander/font-preview/"
+msgstr ""
+"Översätt denna app: https://app.transifex.com/danielnylander/font-preview/"

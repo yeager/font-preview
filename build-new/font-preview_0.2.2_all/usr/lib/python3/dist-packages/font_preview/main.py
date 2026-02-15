@@ -18,6 +18,8 @@ from gi.repository import Gtk, Adw, Gio
 
 # i18n
 LOCALE_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "po")
+if not os.path.isdir(LOCALE_DIR):
+    LOCALE_DIR = "/usr/share/locale"
 gettext.bindtextdomain("font-preview", LOCALE_DIR)
 gettext.textdomain("font-preview")
 _ = gettext.gettext

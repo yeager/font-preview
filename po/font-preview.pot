@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Daniel Nylander
-# This file is distributed under the same license as the font-preview package.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: font-preview\n"
-"Report-Msgid-Bugs-To: daniel@danielnylander.se\n"
-"POT-Creation-Date: 2026-02-15 09:49+0100\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 17:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,132 +17,140 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/font_preview/window.py:55 src/font_preview/window.py:116
-#: src/font_preview/main.py:51
+#: src/font_preview/window.py:57 src/font_preview/window.py:118
+#: src/font_preview/main.py:81
 msgid "Font Preview"
 msgstr ""
 
-#: src/font_preview/window.py:62
+#: src/font_preview/window.py:64
 msgid "The quick brown fox jumps over the lazy dog. 0123456789"
 msgstr ""
 
-#: src/font_preview/window.py:78
+#: src/font_preview/window.py:80
 msgid "Fonts"
 msgstr ""
 
-#: src/font_preview/window.py:83
+#: src/font_preview/window.py:85
 msgid "Search fonts…"
 msgstr ""
 
-#: src/font_preview/window.py:92
+#: src/font_preview/window.py:94
 msgid "All Fonts"
 msgstr ""
 
-#: src/font_preview/window.py:92
+#: src/font_preview/window.py:94
 msgid "Favorites"
 msgstr ""
 
-#: src/font_preview/window.py:120 src/font_preview/window.py:208
+#: src/font_preview/window.py:122 src/font_preview/window.py:221
 msgid "Compare"
 msgstr ""
 
-#: src/font_preview/window.py:127
+#: src/font_preview/window.py:129
 msgid "About Font Preview"
 msgstr ""
 
-#: src/font_preview/window.py:132
+#: src/font_preview/window.py:140
+msgid "Export data"
+msgstr ""
+
+#: src/font_preview/window.py:145
 msgid "Toggle favorite"
 msgstr ""
 
-#: src/font_preview/window.py:143
+#: src/font_preview/window.py:156
 msgid "Preview text:"
 msgstr ""
 
-#: src/font_preview/window.py:168
+#: src/font_preview/window.py:181
 msgid "Preview"
 msgstr ""
 
-#: src/font_preview/window.py:178
+#: src/font_preview/window.py:191
 msgid "Unicode Coverage"
 msgstr ""
 
-#: src/font_preview/window.py:188 src/font_preview/window.py:406
-#: src/font_preview/window.py:416
+#: src/font_preview/window.py:201 src/font_preview/window.py:466
+#: src/font_preview/window.py:476
 msgid "Language Coverage"
 msgstr ""
 
-#: src/font_preview/window.py:198
+#: src/font_preview/window.py:211
 msgid "Metadata"
 msgstr ""
 
-#: src/font_preview/window.py:355 src/font_preview/window.py:366
+#: src/font_preview/window.py:297
+msgid "Export Data"
+msgstr ""
+
+#: src/font_preview/window.py:298
+msgid "Choose export format:"
+msgstr ""
+
+#: src/font_preview/window.py:299
+msgid "Cancel"
+msgstr ""
+
+#: src/font_preview/window.py:415 src/font_preview/window.py:426
 msgid "Unicode Block Coverage"
 msgstr ""
 
-#: src/font_preview/window.py:371
+#: src/font_preview/window.py:431
 #, python-format
 msgid "Total glyphs: %d"
 msgstr ""
 
-#: src/font_preview/window.py:444
+#: src/font_preview/window.py:504
 #, python-format
 msgid "Missing: %s"
 msgstr ""
 
-#: src/font_preview/window.py:458
+#: src/font_preview/window.py:518
 msgid "Font Metadata"
 msgstr ""
 
-#: src/font_preview/window.py:463
+#: src/font_preview/window.py:523
 msgid "Family"
 msgstr ""
 
-#: src/font_preview/window.py:464
+#: src/font_preview/window.py:524
 msgid "Style"
 msgstr ""
 
-#: src/font_preview/window.py:465
+#: src/font_preview/window.py:525
 msgid "Weight"
 msgstr ""
 
-#: src/font_preview/window.py:466
+#: src/font_preview/window.py:526
 msgid "Slant"
 msgstr ""
 
-#: src/font_preview/window.py:467
+#: src/font_preview/window.py:527
 msgid "Width"
 msgstr ""
 
-#: src/font_preview/window.py:468
+#: src/font_preview/window.py:528
 msgid "File"
 msgstr ""
 
-#: src/font_preview/window.py:487
+#: src/font_preview/window.py:547
 msgid "Select 2–4 fonts to compare"
 msgstr ""
 
-#: src/font_preview/window.py:492
+#: src/font_preview/window.py:552
 #, python-format
 msgid "Comparing %d fonts (click more to add, max 4)"
 msgstr ""
 
-#: src/font_preview/window.py:499
+#: src/font_preview/window.py:559
 msgid "Clear comparison"
 msgstr ""
 
-#: src/font_preview/main.py:60
+#: src/font_preview/main.py:91
 msgid "A localization tool by Daniel Nylander"
 msgstr ""
 
-#: src/font_preview/main.py:61
+#: src/font_preview/main.py:92
 msgid ""
 "Translate this app: https://app.transifex.com/danielnylander/font-preview/"
-msgstr ""
-
-#: font-preview/data/se.danielnylander.FontPreview.desktop.in
-msgid "Preview and compare fonts"
-msgstr ""
-
-#: font-preview/data/se.danielnylander.FontPreview.desktop.in
-msgid "font;preview;compare;unicode;"
 msgstr ""

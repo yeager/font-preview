@@ -1,0 +1,101 @@
+name: Build RPM
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-rpm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install RPM tools
+        run: sudo apt-get update && sudo apt-get install -y rpm
+
+      - name: Get version
+        id: version
+        run: echo "version=$(grep -oP '__version__ = "\K[^"]+' src/font_preview/__init__.py)" >> $GITHUB_OUTPUT
+
+      - name: Setup RPM build
+        run: |
+          mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+          VERSION=${{ steps.version.outputs.version }}
+          DIR=font-preview-$VERSION
+          mkdir -p $DIR/src/font_preview
+          mkdir -p $DIR/data/icons $DIR/data/man
+          cp src/font_preview/*.py $DIR/src/font_preview/
+          cp data/se.danielnylander.FontPreview.desktop $DIR/data/
+          cp data/icons/se.danielnylander.font-preview.svg $DIR/data/icons/
+          cp data/man/font-preview.1 $DIR/data/man/
+          cp LICENSE $DIR/
+          test -f po/sv/LC_MESSAGES/font-preview.mo && { mkdir -p $DIR/po/sv/LC_MESSAGES; cp po/sv/LC_MESSAGES/font-preview.mo $DIR/po/sv/LC_MESSAGES/; } || true
+          tar czf ~/rpmbuild/SOURCES/$DIR.tar.gz $DIR
+
+      - name: Create spec file
+        run: |
+          cat > ~/rpmbuild/SPECS/font-preview.spec << 'SPEC'
+          Name:           font-preview
+          Version:        VERSION_PLACEHOLDER
+          Release:        1
+          Summary:        Font preview application
+          License:        GPL-3.0-or-later
+          URL:            https://github.com/yeager/font-preview
+          Source0:        %{name}-%{version}.tar.gz
+          BuildArch:      noarch
+          Requires:       python3 >= 3.9
+          Requires:       python3-gobject
+          Requires:       gtk4
+          Requires:       libadwaita
+
+          %description
+          A GTK4/Libadwaita application for previewing installed fonts.
+
+          %prep
+          %setup -q
+
+          %install
+          mkdir -p %{buildroot}%{_datadir}/font-preview/font_preview
+          cp src/font_preview/*.py %{buildroot}%{_datadir}/font-preview/font_preview/
+          mkdir -p %{buildroot}%{_bindir}
+          cat > %{buildroot}%{_bindir}/font-preview << 'WRAPPER'
+          #!/bin/bash
+          exec python3 -c "import sys; sys.path.insert(0, '/usr/share/font-preview'); from font_preview.main import main; main()" "$@"
+          WRAPPER
+          chmod 755 %{buildroot}%{_bindir}/font-preview
+          install -Dm644 data/se.danielnylander.FontPreview.desktop %{buildroot}%{_datadir}/applications/se.danielnylander.FontPreview.desktop
+          install -Dm644 data/icons/se.danielnylander.font-preview.svg %{buildroot}%{_datadir}/icons/hicolor/scalable/apps/se.danielnylander.font-preview.svg
+          install -Dm644 data/man/font-preview.1 %{buildroot}%{_mandir}/man1/font-preview.1
+          test -f po/sv/LC_MESSAGES/font-preview.mo && install -Dm644 po/sv/LC_MESSAGES/font-preview.mo %{buildroot}%{_datadir}/locale/sv/LC_MESSAGES/font-preview.mo || true
+
+          %files
+          %license LICENSE
+          %{_bindir}/font-preview
+          %{_datadir}/font-preview/
+          %{_datadir}/applications/se.danielnylander.FontPreview.desktop
+          %{_datadir}/icons/hicolor/scalable/apps/se.danielnylander.font-preview.svg
+          %{_mandir}/man1/font-preview.1*
+          %{_datadir}/locale/sv/LC_MESSAGES/font-preview.mo
+
+          %changelog
+          * $(date "+%a %b %d %Y") Daniel Nylander <daniel@danielnylander.se> - VERSION_PLACEHOLDER-1
+          - RPM package
+          SPEC
+          sed -i "s/VERSION_PLACEHOLDER/${{ steps.version.outputs.version }}/g" ~/rpmbuild/SPECS/font-preview.spec
+
+      - name: Build RPM
+        run: rpmbuild -ba ~/rpmbuild/SPECS/font-preview.spec
+
+      - name: Upload RPM to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=${{ steps.version.outputs.version }}
+          gh release upload "v$VERSION" \
+            ~/rpmbuild/RPMS/noarch/font-preview-${VERSION}-1.noarch.rpm \
+            --clobber

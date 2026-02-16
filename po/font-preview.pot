@@ -138,3 +138,11 @@ msgstr ""
 msgid ""
 "Translate this app: https://app.transifex.com/danielnylander/font-preview/"
 msgstr ""
+
+#: font-preview/data/se.danielnylander.FontPreview.desktop.in
+msgid "Preview and compare fonts"
+msgstr ""
+
+#: font-preview/data/se.danielnylander.FontPreview.desktop.in
+msgid "font;preview;compare;unicode;"
+msgstr ""

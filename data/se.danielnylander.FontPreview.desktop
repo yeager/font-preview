@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Font Preview
+Name[sv]=Förhandsvisa typsnitt
 Comment=Preview and compare fonts
 Exec=font-preview
 Icon=font-preview

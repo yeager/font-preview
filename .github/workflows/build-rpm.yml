@@ -112,3 +112,4 @@ SPEC
           gh release upload "v${VERSION}" \
             ~/rpmbuild/RPMS/noarch/font-preview-${VERSION}-1.noarch.rpm \
             --clobber
+# Trigger re-index

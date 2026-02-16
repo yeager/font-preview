@@ -77,8 +77,7 @@ class FontPreviewApplication(Adw.Application):
         win.present()
 
     def _on_about(self, action, param):
-        about = Adw.AboutWindow(
-            transient_for=self.props.active_window,
+        about = Adw.AboutDialog(
             application_name=_("Font Preview"),
             application_icon="font-preview",
             version="0.1.0",
@@ -92,7 +91,7 @@ class FontPreviewApplication(Adw.Application):
             comments=_("A localization tool by Daniel Nylander"),
             translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/font-preview/"),
         )
-        about.present()
+        about.present(self.props.active_window)
 
 
 def main():

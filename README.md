@@ -1,5 +1,9 @@
 # Font Preview
 
+## Screenshot
+
+![Ubuntu L10n](screenshots/main.png)
+
 A GTK4/Adwaita font viewer for Linux. Preview text in all installed fonts, compare fonts side by side, and analyze Unicode coverage.
 
 ![Screenshot](data/screenshots/screenshot-01.png)

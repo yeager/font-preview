@@ -56,7 +56,7 @@ msgstr "Om Förhandsvisa typsnitt"
 
 #: src/font_preview/window.py:140
 msgid "Export data"
-msgstr ""
+msgstr "Exportera data"
 
 #: src/font_preview/window.py:145
 msgid "Toggle favorite"
@@ -85,15 +85,15 @@ msgstr "Metadata"
 
 #: src/font_preview/window.py:297
 msgid "Export Data"
-msgstr ""
+msgstr "Exportera data"
 
 #: src/font_preview/window.py:298
 msgid "Choose export format:"
-msgstr ""
+msgstr "Välj exportformat:"
 
 #: src/font_preview/window.py:299
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/font_preview/window.py:415 src/font_preview/window.py:426
 msgid "Unicode Block Coverage"

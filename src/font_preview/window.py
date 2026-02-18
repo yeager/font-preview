@@ -20,7 +20,6 @@ gi.require_version("Pango", "1.0")
 from gi.repository import Gtk, Adw, Gio, GLib, Pango
 
 from .font_utils import (
-from datetime import datetime as _dt_now
     FontInfo,
     get_installed_fonts,
     get_font_coverage,

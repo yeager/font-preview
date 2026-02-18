@@ -89,7 +89,7 @@ class FontPreviewApplication(Adw.Application):
             issue_url="https://github.com/yeager/font-preview/issues",
             translate_url="https://app.transifex.com/danielnylander/font-preview/",
             comments=_("A localization tool by Daniel Nylander"),
-            translator_credits=_("Translate this app: https://app.transifex.com/danielnylander/font-preview/"),
+            translator_credits=_("Translate this app: https://www.transifex.com/danielnylander/font-preview/"),
         )
         about.present(self.props.active_window)
 

@@ -24,7 +24,6 @@ gettext.bindtextdomain("font-preview", LOCALE_DIR)
 gettext.textdomain("font-preview")
 _ = gettext.gettext
 
-
 class FontPreviewApplication(Adw.Application):
     """Main application class."""
 
@@ -87,18 +86,17 @@ class FontPreviewApplication(Adw.Application):
             license_type=Gtk.License.GPL_3_0,
             website="https://github.com/yeager/font-preview",
             issue_url="https://github.com/yeager/font-preview/issues",
-            translate_url="https://app.transifex.com/danielnylander/font-preview/",
             comments=_("A localization tool by Daniel Nylander"),
             translator_credits=_("Translate this app: https://www.transifex.com/danielnylander/font-preview/"),
         )
-        about.present(self.props.active_window)
+        about.add_link(_("Help translate"), "https://app.transifex.com/danielnylander/font-preview/")
 
+        about.present(self.props.active_window)
 
 def main():
     """Application entry point."""
     app = FontPreviewApplication()
     return app.run(sys.argv)
-
 
 if __name__ == "__main__":
     sys.exit(main())

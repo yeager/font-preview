@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the font-preview package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: font-preview\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 17:15+0100\n"
+"POT-Creation-Date: 2026-02-22 17:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/font_preview/window.py:57 src/font_preview/window.py:118
-#: src/font_preview/main.py:81
+#: src/font_preview/main.py:81 src/font_preview/window.py:57
+#: src/font_preview/window.py:118
 msgid "Font Preview"
+msgstr ""
+
+#: src/font_preview/main.py:91
+msgid "A localization tool by Daniel Nylander"
+msgstr ""
+
+#: src/font_preview/main.py:92
+msgid ""
+"Translate this app: https://www.transifex.com/danielnylander/font-preview/"
 msgstr ""
 
 #: src/font_preview/window.py:64
@@ -144,13 +153,4 @@ msgstr ""
 
 #: src/font_preview/window.py:559
 msgid "Clear comparison"
-msgstr ""
-
-#: src/font_preview/main.py:91
-msgid "A localization tool by Daniel Nylander"
-msgstr ""
-
-#: src/font_preview/main.py:92
-msgid ""
-"Translate this app: https://app.transifex.com/danielnylander/font-preview/"
 msgstr ""

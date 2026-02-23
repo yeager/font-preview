@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the font-preview package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: font-preview\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 17:15+0100\n"
+"POT-Creation-Date: 2026-02-22 17:04+0100\n"
 "PO-Revision-Date: 2026-02-14 09:50+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/danielnylander/teams/304763/sv/)\n"
@@ -21,10 +21,20 @@ msgstr ""
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/font_preview/window.py:57 src/font_preview/window.py:118
-#: src/font_preview/main.py:81
+#: src/font_preview/main.py:81 src/font_preview/window.py:57
+#: src/font_preview/window.py:118
 msgid "Font Preview"
 msgstr "Förhandsvisa typsnitt"
+
+#: src/font_preview/main.py:91
+msgid "A localization tool by Daniel Nylander"
+msgstr "Ett lokalanpassningsverktyg av Daniel Nylander"
+
+#: src/font_preview/main.py:92
+msgid ""
+"Translate this app: https://www.transifex.com/danielnylander/font-preview/"
+msgstr ""
+"Översätt denna app: https://www.transifex.com/danielnylander/font-preview/"
 
 #: src/font_preview/window.py:64
 msgid "The quick brown fox jumps over the lazy dog. 0123456789"
@@ -149,13 +159,3 @@ msgstr "Jämför %d typsnitt (klicka mer för att lägga till, max 4)"
 #: src/font_preview/window.py:559
 msgid "Clear comparison"
 msgstr "Töm jämförelse"
-
-#: src/font_preview/main.py:91
-msgid "A localization tool by Daniel Nylander"
-msgstr "Ett lokalanpassningsverktyg av Daniel Nylander"
-
-#: src/font_preview/main.py:92
-msgid ""
-"Translate this app: https://app.transifex.com/danielnylander/font-preview/"
-msgstr ""
-"Översätt denna app: https://app.transifex.com/danielnylander/font-preview/"

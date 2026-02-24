@@ -30,6 +30,7 @@ class FontPreviewApplication(Adw.Application):
     def __init__(self):
         super().__init__(
             application_id="se.danielnylander.FontPreview",
+        GLib.set_application_name(_("Font Preview"))
             flags=Gio.ApplicationFlags.DEFAULT_FLAGS,
         )
         about_action = Gio.SimpleAction.new("about", None)

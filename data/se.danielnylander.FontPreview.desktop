@@ -9,3 +9,4 @@ Type=Application
 Categories=Utility;GTK;
 Keywords=font;preview;compare;unicode;
 StartupNotify=true
+StartupWMClass=se.danielnylander.FontPreview
